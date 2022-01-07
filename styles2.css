@@ -1,0 +1,54 @@
+.ddItem {
+  position: relative;
+  padding-right: 20px;
+}
+
+.ddItem > a {
+  padding-right: 6px!important;
+}
+
+.ddItem::after {
+  position: absolute;
+  content: '';
+  margin-left: 8px;
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top: 7px solid white;
+  right: 6px;
+  top: calc(50% - 3px);
+}
+
+.ddItem.active {
+  background-color: #e7430f;
+}
+
+.ddMenu {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f15929;
+  border: 1px solid #e7430f;
+  padding: 5px 0 10px 0;
+  width: 700px;
+}
+
+.active .ddMenu {
+  display: grid;
+}
+
+.menuItem {
+  display: block;
+}
+
+.menuItem > a {
+  display: block;
+  padding: 5px 20px;
+  color: white;
+}
+
+.menuItem > a:hover {
+  text-decoration: none;
+  background-color: #e7430f;
+}
